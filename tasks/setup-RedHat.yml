@@ -1,0 +1,10 @@
+---
+
+#
+# Install Prerequisite Packages for RedHat
+#
+
+- name: Install Prerequisite Packages
+  yum: name={{ item }} state=present
+  with_items: gvm_packages
+

@@ -1,0 +1,12 @@
+---
+
+#
+# RedHat based distro variables
+#
+
+__gvm_packages:
+  - curl
+  - unzip
+  - sed
+  - java-1.8.0-openjdk
+

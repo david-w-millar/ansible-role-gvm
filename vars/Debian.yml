@@ -1,0 +1,13 @@
+---
+
+#
+# Debian based distro variables
+#
+
+__gvm_packages:
+  - curl
+  - unzip
+  - sed
+  - openjdk-7-jdk
+
+

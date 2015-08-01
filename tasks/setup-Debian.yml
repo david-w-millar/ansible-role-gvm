@@ -1,0 +1,13 @@
+---
+
+#
+# Install Prerequisite Packages for Debian
+#
+
+- name: Update Package Cache
+  apt: update_cache=yes
+
+- name: Install Prerequisite Packages
+  apt: name={{ item }} state=present
+  with_items: gvm_packages
+
