@@ -19,8 +19,12 @@
   when: ansible_os_family == 'Debian'
 
 - name: Fetch install script
-  get_url: url=http://get.gvmtool.net/ dest=/tmp/gvm_installer.sh mode=0500 # sha256sum=fd8ac0bbf940f04606c578321a5bbc23d5c44b76
+  get_url: http://get.sdkman.io/ dest=/tmp/gvm_installer.sh
+  become: yes
+  become_user: "{{ gvm.user }}"
 
 - name: Install GVM
   shell: /tmp/gvm_installer.sh | tee /tmp/gvm_install_log.txt
+  become: yes
+  become_user: "{{ gvm.user }}"
 

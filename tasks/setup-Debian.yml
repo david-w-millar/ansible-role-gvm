@@ -9,5 +9,5 @@
 
 - name: Install Prerequisite Packages
   apt: name={{ item }} state=present
-  with_items: gvm_packages
+  with_items: "{{ gvm_packages }}"
 
