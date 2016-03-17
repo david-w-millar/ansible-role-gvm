@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: David W Millar
-  description: Manage your groovy ecosystem with gvm ( http://gvmtool.net )
+  description: Manage your groovy ecosystem with GVM ( http://gvmtool.net )
   license: Apache License, Version 2.0
   min_ansible_version: 1.4
   platforms:
