@@ -19,7 +19,7 @@
   when: ansible_os_family == 'Debian'
 
 - name: Fetch install script
-  get_url: src=http://get.sdkman.io/ dest=/tmp/gvm_installer.sh
+  get_url: url=http://get.sdkman.io/ dest=/tmp/gvm_installer.sh
   become: yes
   become_user: "{{ gvm.user }}"
 
