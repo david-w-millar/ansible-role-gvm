@@ -33,12 +33,13 @@ The GVM / SdkMan installation scripts only update shell startup scripts the firs
 If a user changes her shell after this role is applied, subsequent applications will fail
 to update the new users shell startup scripts.
 
-Until I find a more elegant solution for this problem (or someone is kind enough to issue a pull request),
+Until I find a more elegant solution for this problem
+(or someone is kind enough to issue a pull request for this project or GVM / SdkMan),
 you can work around this adding the following snippet to your bash compatible startup scripts,
 
 ```bash
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/<username>/.sdkman"
+export SDKMAN_DIR="/Users/$(whoami)/.sdkman"
 [[ -s "/Users/$(whoami)/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$(whoami)/.sdkman/bin/sdkman-init.sh"
 
 ```
