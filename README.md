@@ -26,6 +26,23 @@ None.
       roles:
          - david-w-millar.gvm
 
+## Caveats
+
+The GVM / SdkMan installation scripts only update shell startup scripts the first time that it is run.
+
+If a user changes her shell after this role is applied, subsequent applications will fail
+to update the new users shell startup scripts.
+
+Until I find a more elegant solution for this problem, you can work around this adding the following snippet to your startup scripts,
+and replace *<username>* with yhour username:
+
+```bash
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/<username>/.sdkman"
+[[ -s "/Users/<username>/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/<username>/.sdkman/bin/sdkman-init.sh"
+
+```
+
 ## TODO
 
 * CI & Testing
@@ -33,7 +50,6 @@ None.
 * Add vars for GVM config
 * Add feature to install tools, optionally with a specified version
 * Use ansigenome
-* Address problem where this role does not play well with any roles that change the user's shell
 
 ## License
 
