@@ -1,9 +1,7 @@
-# Ansible GVM Role - Work In Progress
+# Ansible GVM Role
 
 Ansible role to help manager your Groovy ecosystem with [GVM](http://gvmtool.net).
 The official name has been changed to [SdkMan](http://sdkman.io), but that's still growing on me.
-
-This role is a work in progress. It will probably work for most cases, but needs a bit of polishing.
 
 ## Requirements
 
