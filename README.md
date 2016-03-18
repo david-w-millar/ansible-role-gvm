@@ -56,6 +56,6 @@ See [this](https://github.com/sdkman/sdkman-cli/blob/master/src/main/bash/instal
 
 ## License
 
-http://www.apache.org/licenses/LICENSE-2.0.html[Apache License, Version 2.0].
+[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
